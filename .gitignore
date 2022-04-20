@@ -2,3 +2,4 @@ dist/index.html
 dist/js
 dist/css
 node_modules/
+config.php
