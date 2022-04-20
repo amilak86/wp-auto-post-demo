@@ -1,0 +1,25 @@
+{
+    "name": "ak86/wp-auto-post-demo",
+    "description": "Demo project demonstrating how to use ak86/wp-auto-post package",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amila K.",
+            "email": "28174846+amilak86@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/home/amila/www/wp-auto-post",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "require": {
+        "ak86/wp-auto-post": "@dev"
+    }
+}
