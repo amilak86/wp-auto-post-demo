@@ -26,14 +26,14 @@
                                     <form @submit.prevent="handleSubmit(submitPost)" ref="form">
                                         <div class="form">
                                             <span class="font-weight-normal">Post Title</span>
-                                            <validation-provider name="Post Title" rules="required|alpha" v-slot="{ dirty, valid, invalid, errors }">
+                                            <validation-provider name="Post Title" rules="required" v-slot="{ dirty, valid, invalid, errors }">
                                                 <input type="text" class="form-control" placeholder="Test Post" v-model="post.title" :readonly="submitting" /> 
                                                 <span class="invalid-feedback d-inline-block" v-show="errors">{{ errors[0] }}</span>
                                             </validation-provider>
                                         </div>
                                         <div class="form">
                                             <span class="font-weight-normal">Post Description</span>
-                                            <validation-provider name="Post Description" rules="required|alpha" v-slot="{ dirty, valid, invalid, errors }">
+                                            <validation-provider name="Post Description" rules="required" v-slot="{ dirty, valid, invalid, errors }">
                                                 <textarea class="form-control description-area" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus urna aliquet convallis..." v-model="post.description" :readonly="submitting"></textarea> <!--<a href="#" class=""><i class="fa fa-paperclip"></i></a> -->
                                                 <span class="invalid-feedback d-inline-block" v-show="errors">{{ errors[0] }}</span>
                                             </validation-provider>
