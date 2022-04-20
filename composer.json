@@ -9,7 +9,6 @@
             "email": "28174846+amilak86@users.noreply.github.com"
         }
     ],
-    "minimum-stability": "dev",
     "repositories": [
         {
             "type": "path",
