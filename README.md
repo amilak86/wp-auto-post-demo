@@ -1,6 +1,6 @@
 # WP Auto Post Demo
 
-This sample projects demonstrates how to use []() library for creating new posts (programatically) without having to log into your wordpress dashboard. 
+This sample projects demonstrates how to use [WP Auto Post Client](https://github.com/amilak86/wp-auto-post) library for creating new posts (programatically) without having to log into your wordpress dashboard. 
 
 ## Demo Link
 
