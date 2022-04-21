@@ -61,27 +61,31 @@ var app = new Vue({
 
                console.log(res)
 
-               if (res.data.status) {
+               if (!res.data.status) {
+                    throw res.data.message
+               }
 
-                   let confirmres = await Swal.fire({
-                       title: 'Success',
-                       icon: 'success',
-                       html: 'Please <a href="https://wp-testbed.amilakalnsooriya.me" target="_blank">click here</a> to see the post.'
-                   })
+               let confirmres = await Swal.fire({
+                    title: 'Success',
+                    icon: 'success',
+                    html: 'Please <a href="https://wp-testbed.amilakalnsooriya.me" target="_blank">click here</a> to see the post.'
+               })
 
-                   if (confirmres.isConfirmed) {
-                       location.reload()
-                   }
-
+               if (confirmres.isConfirmed) {
+                    location.reload()
                }
 
             } catch (err) {
                 console.error(err)
+
                 Swal.fire({
                    icon: 'error',
                    title: 'Oops...',
-                   text: 'Something went wrong! Please try again!',
+                   text: err,
                 })
+                
+                this.submitting = false
+                //return false
             }
         }
     }
