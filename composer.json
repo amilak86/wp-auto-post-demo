@@ -9,16 +9,7 @@
             "email": "28174846+amilak86@users.noreply.github.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/home/amila/www/wp-auto-post",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "require": {
-        "ak86/wp-auto-post": "@dev"
+        "ak86/wp-auto-post": "^1.0"
     }
 }

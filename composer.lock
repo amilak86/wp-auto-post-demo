@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1603ce13f45bae3325f7b57c3baf01b",
+    "content-hash": "89b518708575c98400b32a5900f2ed1d",
     "packages": [
         {
             "name": "ak86/wp-auto-post",
-            "version": "dev-dev",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amilak86/wp-auto-post.git",
+                "reference": "a88bb71ab6fa659744b75983355113dc6e0d7a48"
+            },
             "dist": {
-                "type": "path",
-                "url": "/home/amila/www/wp-auto-post",
-                "reference": "0a970573bfadf163e11fe35fe0e2e106f6f0a7bd"
+                "type": "zip",
+                "url": "https://api.github.com/repos/amilak86/wp-auto-post/zipball/a88bb71ab6fa659744b75983355113dc6e0d7a48",
+                "reference": "a88bb71ab6fa659744b75983355113dc6e0d7a48",
+                "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.4",
@@ -24,6 +30,7 @@
                     "Ak86\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -33,11 +40,12 @@
                     "email": "28174846+amilak86@users.noreply.github.com"
                 }
             ],
-            "description": "A PHP script to automate posting to a Wordpress site",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "description": "A simple PHP library for programatically creating Wordpress posts.",
+            "support": {
+                "issues": "https://github.com/amilak86/wp-auto-post/issues",
+                "source": "https://github.com/amilak86/wp-auto-post/tree/v1.0.0"
+            },
+            "time": "2022-04-21T07:05:04+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -786,9 +794,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "ak86/wp-auto-post": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
