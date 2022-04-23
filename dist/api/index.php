@@ -73,7 +73,7 @@ use Ak86\WPAutoPost;
 		);
 
 		// create the post in wordpress
-		if(!$wpap_client->add_wp_post($postData, $uploaded_image->id))
+		if(!$wpPost = $wpap_client->add_wp_post($postData, $uploaded_image->id))
 		{
 			throw new Exception('Error occurred while trying to create the wordpress post! Check your post data!');
 		}
@@ -83,7 +83,7 @@ use Ak86\WPAutoPost;
 
 		$response = [
 			'status' => 1,
-			'message' => 'Success!'
+			'message' => 'Please <a href="'.$wpPost->link.'" target="_blank">click here</a> to see the post.'
 		];
 
 	} catch (Exception $e) {
