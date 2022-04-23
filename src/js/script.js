@@ -68,7 +68,7 @@ var app = new Vue({
                let confirmres = await Swal.fire({
                     title: 'Success',
                     icon: 'success',
-                    html: 'Please <a href="https://wp-testbed.amilakalnsooriya.me" target="_blank">click here</a> to see the post.'
+                    html: res.data.message
                })
 
                if (confirmres.isConfirmed) {
