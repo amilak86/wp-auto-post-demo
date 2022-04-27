@@ -53,11 +53,7 @@ var app = new Vue({
 
             // axios here
             try {
-               const res = await axios.post('api/', formData, {
-                   headers: {
-                       'Content-Type': 'multipart/form-data'
-                   }
-               })
+               const res = await axios.post('api/', formData)
 
                console.log(res)
 
