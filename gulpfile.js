@@ -3,6 +3,7 @@ const htmlmin = require('gulp-htmlmin');
 const terser = require('gulp-terser');
 const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
+const replace = require('gulp-replace');
 
 gulp.task('minify-html', () => {
   return gulp.src('src/*.html')
@@ -38,5 +39,15 @@ gulp.task('uglify-scripts', (done) => {
 	done();
 })
 
+gulp.task('cache-bust', (done) => {
+	gulp.src('./dist/**/*.html')
+		.pipe(replace(/cid=\d+/g, 'cid=' + new Date().getTime()))
+		.pipe(gulp.dest('./dist/'))
+		.on('error', function(err){
+			console.error(err);
+		});
 
-gulp.task('default', gulp.series('minify-html', 'minify-styles', 'uglify-scripts'));
+	done();
+})
+
+gulp.task('default', gulp.series('minify-html', 'minify-styles', 'uglify-scripts', 'cache-bust'));
